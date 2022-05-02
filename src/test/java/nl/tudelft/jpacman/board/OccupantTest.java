@@ -50,4 +50,19 @@ class OccupantTest {
     	assertThat(square.getOccupants()).contains(unit);
     }
 
+    @Test
+    void testReoccupy() {
+        Square square1 = new BasicSquare();
+        Square square2 = new BasicSquare();
+
+        unit.occupy(square1);
+
+        assertThat(unit.getSquare()).isEqualTo(square1);
+        assertThat(square1.getOccupants()).contains(unit);
+
+        unit.occupy(square2);
+
+        assertThat(unit.getSquare()).isEqualTo(square2);
+        assertThat(square2.getOccupants()).contains(unit);
+    }
 }
