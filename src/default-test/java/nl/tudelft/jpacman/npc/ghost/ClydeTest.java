@@ -18,7 +18,7 @@ public class ClydeTest {
     private MapParser mapParser;
 
     @BeforeEach
-    void setup() {
+    void setUp() {
         PacManSprites spriteStore = new PacManSprites();
         GhostFactory ghostFactory = new GhostFactory(spriteStore);
 
